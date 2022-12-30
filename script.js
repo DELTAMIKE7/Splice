@@ -79,7 +79,7 @@ var ok =gsap.timeline({scrollTrigger: {
   start:"top 30%",
   // end:" -=600",
   // end:"top 5%",
-  markers:true,
+  // markers:true,
   pin:true,
   // scrub : true,
 }})

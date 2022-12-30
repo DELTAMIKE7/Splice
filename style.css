@@ -123,7 +123,6 @@ nav .navright{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* pointer-events: all; */
     cursor: pointer;
 }
 .trybtnhide:hover{
