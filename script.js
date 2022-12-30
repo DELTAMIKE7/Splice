@@ -77,17 +77,16 @@ var ok =gsap.timeline({scrollTrigger: {
   trigger:".mmtxt",
   // scroller:".container",
   start:"top 30%",
-  end:" -=600",
-  // markers:true,
+  // end:" -=600",
+  // end:"top 5%",
+  markers:true,
   pin:true,
-  scrub : true
+  // scrub : true,
 }})
-.to(".mmtxt",{
-  y: -300,
-})
 // .to(".mmtxt",{
-//   scrub:true,
-//   opacity:0
+//   y: -250,
+//   duration:.3,
+//   scrub: 1
 // })
 
 // ----------Page 2 gsap -------
@@ -440,6 +439,15 @@ gsap.from(".pg8img-content",{
 const contentImg=document.querySelectorAll(".contents-item");
 const imaMoveDiv=document.querySelector("#mainimage");
 
+// var pageEight=document.querySelector(".pg8img-content")
+// // var cursor = document.querySelector(".cursor");
+// pageEight.addEventListener("mousemove",function(e){
+//   imaMoveDiv.style.top=e.pageY +`px`;
+//   imaMoveDiv.style.left=e.pageX +`px`;
+// })
+const pgEight=document.querySelector(".pg8img-content")
+
+
 contentImg.forEach(function(elems){
 
   elems.addEventListener("mouseenter",function(){
@@ -450,18 +458,40 @@ contentImg.forEach(function(elems){
     imaMoveDiv.style.backgroundPosition="center";
     imaMoveDiv.style.backgroundSize="cover";
   })
-
-window.addEventListener("mousemove",function(dets){
+pgEight.addEventListener("mousemove",function(dets){
   // const mouseY = e.clientY;
   // const mouseX = e.clientX;
+  
     imaMoveDiv.style.left=`${dets.x -150}px`
     imaMoveDiv.style.top=`${dets.y-100}px`
-    // imgMoveDiv.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-  
-    // imgMoveDiv.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
- 
-
     
   })
-  
 })
+
+
+
+
+
+const circle=document.querySelector(".mv-images");
+
+const pageOne=document.querySelector("#page1");
+
+pageOne.addEventListener("mouseenter",move());
+// content.addEventListener("mouseleave",mleave())
+
+const wid =pageOne.getBoundingClientRect().width;
+const hei =pageOne.getBoundingClientRect().height;
+
+function move(){
+  pageOne.addEventListener("mousemove",function(dets){
+      // console.log("hey");
+      // console.log((dets.x -(wid/2))/(wid/25));
+      // console.log(((dets.y - 15)/2));
+      // circle.style.transform =`translate(${(dets.x -(wid/1))/(wid/30)}%,${((dets.y - 50)/10)}%)`
+
+      // circle.style.transform =`translate(${(dets.x -(wid/50))/(wid/2)}%,-50%)`
+      circle.style.transform =`translate(${-(dets.x -(wid/30))/(wid/5)}%,${-((dets.y - (hei/30))/(hei/5))}%)`
+
+  })
+
+}
