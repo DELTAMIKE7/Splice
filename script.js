@@ -445,28 +445,31 @@ const imaMoveDiv=document.querySelector("#mainimage");
 //   imaMoveDiv.style.top=e.pageY +`px`;
 //   imaMoveDiv.style.left=e.pageX +`px`;
 // })
-const pgEight=document.querySelector(".pg8img-content")
 
+function page8anime(){
 
-contentImg.forEach(function(elems){
-
-  elems.addEventListener("mouseenter",function(){
-    let imgs= elems.getAttribute("data-image");
-    imaMoveDiv.style.backgroundImage=`url(${imgs})`
-    imaMoveDiv.style.width="15vw";
-    imaMoveDiv.style.height="12vw";
-    imaMoveDiv.style.backgroundPosition="center";
-    imaMoveDiv.style.backgroundSize="cover";
-  })
-pgEight.addEventListener("mousemove",function(dets){
-  // const mouseY = e.clientY;
-  // const mouseX = e.clientX;
+  const pgEight=document.querySelector(".pg8img-content")
+  contentImg.forEach(function(elems){
   
-    imaMoveDiv.style.left=`${dets.x -150}px`
-    imaMoveDiv.style.top=`${dets.y-100}px`
-    
+    elems.addEventListener("mouseenter",function(){
+      let imgs= elems.getAttribute("data-image");
+      imaMoveDiv.style.backgroundImage=`url(${imgs})`
+      imaMoveDiv.style.width="15vw";
+      imaMoveDiv.style.height="12vw";
+      imaMoveDiv.style.backgroundPosition="center";
+      imaMoveDiv.style.backgroundSize="cover";
+      pgEight.addEventListener("mousemove",function(dets){
+        // const mouseY = e.clientY;
+        // const mouseX = e.clientX;
+        
+          imaMoveDiv.style.left=`${dets.x -150}px`
+          imaMoveDiv.style.top=`${dets.y-100}px`
+          
+        })
+    })
   })
-})
+}
+page8anime();
 
 
 
@@ -495,3 +498,36 @@ function move(){
   })
 
 }
+
+function imagesChangeHover(){
+
+  var posX = 0,
+  posY = 0,
+  mouseX =0,
+  mouseY=0;
+
+var mainImg =document.querySelector("#mainimage");
+
+  TweenMax.to({}, 0.016 ,{
+    repeat: -1,
+    onRepeat: function(){
+      posX += (mouseX - posX) / 9;
+      posY += (mouseY - posY) / 9;
+
+      TweenMax.set(mainImg ,{
+        css: {
+          left : mouseX,
+          top: mouseY
+        }
+      });
+    }
+  })
+
+  
+
+
+
+
+
+}
+// imagesChangeHover();

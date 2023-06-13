@@ -255,7 +255,7 @@ nav .navright{
 }
 /* ------- Music MADE Text ----- */
 .mmtxt{
-    width: 71vw;
+    width: 50vw;
     position: absolute;
     left: 0;
     right: 0;
@@ -672,8 +672,15 @@ nav .navright{
     z-index: 9;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
-.boxes:nth-child(1){
+.boxes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* .boxes:nth-child(1){
     background-image: url(https://images.unsplash.com/photo-1440317661399-07b1fccbe22e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
 }
 .boxes:nth-child(2){
@@ -681,7 +688,7 @@ nav .navright{
 }
 .boxes:nth-child(3){
     background-image: url(https://images.unsplash.com/photo-1626873784757-b7515572b979?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-}
+} */
 
 .pg6-lpara{
     text-align: center;
@@ -943,9 +950,9 @@ nav .navright{
 }
 #mainimage{
     position: absolute;
-    width: 100px;
-    height: 200px;
-    /* background-color: red; */
+    width: 230px;
+    height: 170px;
+    background-color: red;
     z-index: 99;
     top: 50%;
     left: 50%;
@@ -954,7 +961,7 @@ nav .navright{
     transition:  margin-bottom 1s ease;
     cursor: grab;
     transition: cursor ease .2s;
-    opacity: .7;
+    opacity: .8;
 }
 .cursor{
     position: absolute;
