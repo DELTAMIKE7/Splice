@@ -520,7 +520,7 @@ nav .navright{
 .sliding-bg{
     width: 100%;
     height: 10vh;
-    background: url(https://hello-splice.com/lp/assets/img/lp/artist-loop.png) repeat-x;
+    /* background: url(https://hello-splice.com/lp/assets/img/lp/artist-loop.png) repeat-x; */
     /* background-size: auto 100%; */
      animation: slide 15s linear infinite;
      background-size: 100vw 5vw;
@@ -620,7 +620,7 @@ nav .navright{
     left: 0;
     display: block;
     z-index: 0;
-    background: url(https://hello-splice.com/lp/assets/img/lp/plan-en-pc.svg) 0 center no-repeat;
+    /* background: url(https://hello-splice.com/lp/assets/img/lp/plan-en-pc.svg) 0 center no-repeat; */
     background-size: 100% auto;
     width: 11.805vw;
     height: 100%;
@@ -632,7 +632,7 @@ nav .navright{
     right: 0;
     display: block;
     z-index: 0;
-    background: url(https://hello-splice.com/lp/assets/img/lp/plan-en-pc.svg) 0 center no-repeat;
+    /* background: url(https://hello-splice.com/lp/assets/img/lp/plan-en-pc.svg) 0 center no-repeat; */
     background-size: 100% auto;
     width: 11.805vw;
     height: 100%;
@@ -1070,7 +1070,7 @@ footer::before{
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(https://hello-splice.com/lp/assets/img/common/logo.svg);
+    /* background-image: url(https://hello-splice.com/lp/assets/img/common/logo.svg); */
     background-size: auto 100%;
     display: block;
 }
