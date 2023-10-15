@@ -278,7 +278,7 @@ nav .navright{
     z-index: 2;
     /* background-color: green; */
 }
-.mmtxt>h1{
+.mainmmtxt{
     text-align: center;
     font-size: 15vw;
     font-weight: 900;
