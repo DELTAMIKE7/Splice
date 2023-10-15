@@ -77,7 +77,7 @@ var ok =gsap.timeline({scrollTrigger: {
   trigger:".mmtxt",
   // scroller:".container",
   start:"top 30%",
-  // end:" -=600",
+  end:"top 2%",
   // end:"top 5%",
   // markers:true,
   pin:true,

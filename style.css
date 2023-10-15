@@ -110,7 +110,18 @@ nav .navright{
     cursor: pointer;
     display: block;
     animation: slidefbtntry 2s linear infinite;
+    display: flex;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
 }
+#navtrybtn>span>a>h1{
+    margin-left: 5px;
+    white-space: nowrap;
+    background: rgb(25, 39, 166);
+    color: white;
+}
+
 .trybtnhide{
     position: absolute;
     top: 0;
@@ -124,6 +135,9 @@ nav .navright{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+.trybtnhide h1{
+    color: white;
 }
 .trybtnhide:hover{
     display: none;
@@ -199,7 +213,7 @@ nav .navright{
     /* top: 50%; */
     /* left: 50%; */
     /* right: 0; */
-    transform: translate(-50%,-50%);
+    transform: translate(0%,0%);
     /* transform: translate3d(-50% , -50% ,100px ); */
 }
 .mv-images>img{
@@ -225,14 +239,14 @@ nav .navright{
     z-index: 1;
 }
 .pic3{
-    width: 5.555vw;
+    width: 10.555vw;
     top: 4%;
     /* top: 11.111vw; */
     left: calc(50% - 0vw);
     transform: translate(-20%,-0%);
 }
 .pic4{
-    width: 12.5vw;
+    width: 10.5vw;
     top: 48%;
     /* top: 27.777vw; */
     left: calc(50% + 13.541vw);
@@ -240,14 +254,14 @@ nav .navright{
     z-index: 50;
 }
 .pic5{
-    width: 8.333vw;
+    width: 18.333vw;
     top: 10%;
     /* top: 15.277vw; */
     left: calc(50% + 29.166vw);
     transform: translate(-20%,-0%);
 }
 .pic6{
-    width: 5.555vw;
+    width: 15.555vw;
     top: 64%;
     /* top: 29.166vw; */
     left: calc(50% + 47.916vw);
@@ -255,13 +269,21 @@ nav .navright{
 }
 /* ------- Music MADE Text ----- */
 .mmtxt{
-    width: 50vw;
+    width: 100vw;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 20vw;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50% ,-50%);
     pointer-events: none;
     z-index: 2;
+    /* background-color: green; */
+}
+.mmtxt>h1{
+    text-align: center;
+    font-size: 15vw;
+    font-weight: 900;
+    white-space: nowrap;
+    color: white;
 }
 .mmtxt img{
     z-index: inherit;
@@ -426,7 +448,7 @@ nav .navright{
     justify-content: flex-end;
 }
 .artist-pics p{
-    width: 12.5vw;
+    width: 15.5vw;
     margin-right: 3vw;
 }
 .artist-pics img{
@@ -435,10 +457,10 @@ nav .navright{
     vertical-align: top;
 }
 .artist-pics p:nth-of-type(1){
-    margin-top: 8vw;
+    margin-top: 6vw;
 }
 .artist-pics p:nth-of-type(3){
-    margin-top: 4vw;
+    margin-top: 1vw;
 }
 .artist-pack{
     margin-top: 4vw;
@@ -563,9 +585,11 @@ nav .navright{
     align-items: center;
     justify-content: center;
     width: 50%;
+    background-color: #000;
+    overflow: hidden;
 }
 .pg5-pic img{
-    width: 42vw;
+    width: 52vw;
 }
 
 
@@ -754,19 +778,19 @@ nav .navright{
     z-index: 9;
 }
 .illust-1{
-    top: 13.5vw;
+    top: 5.5vw;
     left: 16vw;
-    width: 19vw;
+    width: 2vw;
     transition: width .6s ease;
 }
 .illust-2{
-    top: 19.3vw;
-    left: 10vw;
-    width: 9vw;
+    top: 8.3vw;
+    left: 16vw;
+    width: 11vw;
 }
 .illust-3{
-    top: 17.5vw;
-    left: 22vw;
+    top: 5.5vw;
+    left: 15vw;
     width: 13vw;
 }
 .pg7-illust img{
@@ -774,7 +798,7 @@ nav .navright{
     width: inherit;
 }
 .pg7-illust.illust-1 img{
-    width: 19.4vw;
+    width:10.4vw;
     height: auto;
     vertical-align: top;
 }
@@ -987,7 +1011,7 @@ nav .navright{
     width: 100%;
     min-height: 90vh;
     /* background-color: #516e9d; */
-    background-image: url(https://hello-splice.com/lp/assets/img/lp/visual-pc.jpg);
+    background-image: url(./images/splice-footer.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -1099,7 +1123,7 @@ footer::before{
     animation: slidefbtntry 2s linear infinite;
 }
 .okbtn span a img{
-    height: 1.2vw;
+    height: 3.2vw;
 }
 
 .ftryslide{
